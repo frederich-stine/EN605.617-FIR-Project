@@ -1,0 +1,3 @@
+[submodule "pyfda"]
+	path = pyfda
+	url = git@github.com:chipmuenk/pyfda.git
