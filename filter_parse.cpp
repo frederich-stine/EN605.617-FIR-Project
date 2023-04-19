@@ -7,7 +7,7 @@ filterParse::filterParse(char* fileName) {
 	FILE* fh;
 	fh = fopen(fileName, "r");
 	if ( fh==NULL ) {
-		printf("Error: Filter file is invalid!");
+		printf("Error: Filter file is invalid!\n");
 		exit(0);
 	}
 

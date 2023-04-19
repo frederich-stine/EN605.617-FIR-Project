@@ -12,10 +12,15 @@
 #include "wav_parse.h"
 
 /******************* CUDA Kernel Prototypes ********************/
+__global__ 
+void gpuFIRKernel(double* filter, double* audio, 
+	double* audioOut, int filterLen, int workSize);
 
 /******************* Core Function Prototypes ********************/
 // Function to run an FFT on a simple audio file
 // void runFFT (void);
+void cpuFIR(filterParse* filter, wavParse* audio, wavWriter* audioOut);
+void gpuFIR(filterParse* filter, wavParse* audio, wavWriter* audioOut);
 
 /******************* Helper Function Prototypes ********************/
 
@@ -25,7 +30,7 @@ int numSamples, resultSize, resultSizeBytes;
 /******************* Funtion definitions ********************/
 int main (int argc, char** argv) {
 	// Prints out a help menu if not enough params are passed
-	if (argc != 3) {
+	if (argc != 4) {
 		printf("Error: Correct usage is\n");
 		printf("     : ./fast-fir filter audioFileIn audioFileOut\n");
 		exit(0);
@@ -33,33 +38,104 @@ int main (int argc, char** argv) {
 
 	filterParse filter(argv[1]);
 	wavParse audio(argv[2]);
-	wavWriter audioOut("440Hz_44100Hz_16bit_05sec_filtered.wav");
+	wavWriter audioOut(argv[3]);
 	audioOut.writeHeader(&audio.header);
 
 	printf("CoeffArrValue: %lf\n", filter.coeffArr[filter.len-1]);
 	printf("FilterLen: %d\n", filter.len);
 	printf("NumChannels: %d\n", audio.header.NumChannels);
 	printf("SampleRate: %d\n", audio.header.SampleRate);
+	printf("BitsPerSample: %d\n", audio.header.BitsPerSample);
 
 	audio.workSize = 100000;
-	size_t workSize = audio.loadWorkSize(filter.len);
 
-	printf("Work size: %d\n", (int)workSize);
-
-	double temp = 0;
-	for (int x=0; x<(workSize-filter.len); x++) {
-		temp = 0;
-		for (int i=x; i<(filter.len+x); i++) {
-			temp += audio.audioBuf[i] * filter.coeffArr[i-x];
-		}
-		audioOut.writeSample(temp);
-		printf("Calculated value: %lf\n", temp);
-	}
-
-	workSize = audio.loadWorkSize(filter.len);
+	//cpuFIR(&filter, &audio, &audioOut);
+	gpuFIR(&filter, &audio, &audioOut);
 
 	// Run core function
 	//runFFT();
+}
+
+void cpuFIR(filterParse* filter, wavParse* audio, wavWriter* audioOut) {
+	
+	size_t workSize = audio->loadWorkSize(filter->len);
+
+	while (workSize > filter->len) {
+
+		//printf("Work size: %d\n", (int)workSize);
+
+		double temp = 0;
+		for (int x=0; x<(workSize-filter->len); x++) {
+			temp = 0;
+			for (int i=x; i<(filter->len+x); i++) {
+				temp += audio->audioBuf[i] * filter->coeffArr[i-x];
+			}
+			audioOut->writeSample(temp);
+			// printf("Calculated value: %lf\n", temp);
+		}
+
+		workSize = audio->loadWorkSize(filter->len);
+	}
+}
+
+void gpuFIR(filterParse* filter, wavParse* audio, wavWriter* audioOut) {
+
+	double *audioOutBufHost;
+	double *filterBuf, *audioBuf, *audioOutBuf;
+
+	cudaMallocHost((void**)&audioOutBufHost, audio->workSize*(sizeof(double)));
+
+	cudaMalloc((void**)&filterBuf, filter->len*(sizeof(double)));
+	cudaMalloc((void**)&audioBuf, audio->workSize*(sizeof(double)));
+	cudaMalloc((void**)&audioOutBuf, audio->workSize*(sizeof(double)));
+
+	cudaMemcpy(filterBuf, filter->coeffArr, filter->len*(sizeof(double)), cudaMemcpyHostToDevice);
+
+	size_t workSize = audio->loadWorkSize(filter->len);
+
+	while (workSize > filter->len) {
+		int batchSize = workSize - filter->len;
+		int blockSize = 64;
+		int numBlocks = batchSize+(blockSize-1) / blockSize;
+
+		cudaMemcpy(audioBuf, audio->audioBuf, workSize*(sizeof(double)), cudaMemcpyHostToDevice);
+
+		// Change block size and block count to be dynamic
+		gpuFIRKernel<<<numBlocks, blockSize>>>(filterBuf, audioBuf, audioOutBuf, filter->len, workSize);
+
+		cudaMemcpy(audioOutBufHost, audioOutBuf, audio->workSize*(sizeof(double)), cudaMemcpyDeviceToHost);
+
+		for (int i=0; i<workSize-filter->len; i++) {
+			audioOut->writeSample(audioOutBufHost[i]);
+		}
+
+		workSize = audio->loadWorkSize(filter->len);
+	}
+
+	cudaFree(filterBuf);
+	cudaFree(audioBuf);
+	cudaFree(audioOutBuf);
+
+	cudaFreeHost(audioOutBufHost);
+}
+
+__global__ 
+void gpuFIRKernel(double* filter, double* audio, 
+	double* audioOut, int filterLen, int workSize) {
+	
+	const unsigned int thread_idx = (blockIdx.x * blockDim.x) + threadIdx.x;
+
+	if (thread_idx >= workSize-filterLen) {
+		return;
+	}
+
+	double temp = 0;
+
+	for (int i=0; i<filterLen; i++) {
+		temp += audio[i+thread_idx] * filter[i];
+	}
+
+	audioOut[thread_idx] = temp;
 }
 
 /*

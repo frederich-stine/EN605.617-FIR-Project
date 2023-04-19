@@ -45,7 +45,7 @@ size_t wavParse::loadWorkSize(int filterSize) {
 
 		this->firstLoad = false;
 		free(rawAudio);
-		return bytesRead/(sizeof(int16_t));
+		return (bytesRead/(sizeof(int16_t))+filterSize);
 	}
 
 	fseek(fh, filterSize*-1*sizeof(int16_t), SEEK_CUR);
