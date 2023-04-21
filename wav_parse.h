@@ -26,23 +26,33 @@ class wavParse {
 	public:
 		wavParse(char* fileName); 
 		~wavParse();
+		
 		size_t loadWorkSize(int filterSize);
+		size_t loadData(int count);
+		void flush();
+		void reset();
+		long int tell();
+
 		wavData header;
-		double* audioBuf;
+		char* fileName = NULL;
+		double* audioBuf = NULL;
 		int workSize = 10000;
+		FILE* fh;
 	private:
 		bool firstLoad = true;
-		FILE* fh;
 };
 
-class wavWriter {
+class wavWrite {
 	public:
-		wavWriter(char* fileName);
-		~wavWriter();
+		wavWrite(char* fileName); 
+		~wavWrite();
+		
 		void writeHeader(wavData* header);
 		void writeSample(double sample);
-	private:
+		void writeBulk(double* sample, int sampleCount);
 		FILE* fh;
+
 };
+
 
 #endif
