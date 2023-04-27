@@ -3,6 +3,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 
+
 wavParse::wavParse(char* fileName) {
 	this->fh = fopen(fileName, "rb");
 	if ( this->fh==NULL ) {
@@ -94,6 +95,19 @@ void wavParse::reset() {
 	this->firstLoad = true;
 }
 
+void wavParse::printInfo() {
+	printf("----- Wav Info -----\n");
+	printf("ChunkSize: %d\n", this->header.ChunkSize);
+	printf("SubChunkSize: %d\n", this->header.SubChunkSize);
+	printf("AudioFormat: %d\n", this->header.AudioFormat);
+	printf("NumChannels: %d\n", this->header.NumChannels);
+	printf("SampleRate: %d\n", this->header.SampleRate);
+	printf("ByteRate: %d\n", this->header.ByteRate);
+	printf("BlockAlign: %d\n", this->header.BlockAlign);
+	printf("BitsPerSample: %d\n", this->header.BitsPerSample);
+	printf("SubChunk2Size %d\n\n", this->header.SubChunkSize);
+}
+
 wavParse::~wavParse(void) {
 	if (this->audioBuf != NULL) {
 		free(this->audioBuf);
@@ -108,6 +122,7 @@ wavWrite::wavWrite(char* fileName) {
 		exit(0);
 	}
 }
+
 
 void wavWrite::writeHeader(wavData* header) {
 	fwrite(header, 1, sizeof(wavData), fh);
