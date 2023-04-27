@@ -94,25 +94,6 @@ void wavParse::reset() {
 	this->firstLoad = true;
 }
 
-long int wavParse::tell() {
-	return ftell(this->fh);
-}
-
-void wavParse::flush() {
-	if (this->fh == NULL) {
-		return;
-	}
-
-	fflush(this->fh);
-	fclose(this->fh);
-
-	this->fh = fopen(this->fileName, "rwb");
-	if ( this->fh==NULL ) {
-		printf("Error: Wav file is invalid!");
-		exit(0);
-	}
-}
-
 wavParse::~wavParse(void) {
 	if (this->audioBuf != NULL) {
 		free(this->audioBuf);
@@ -123,7 +104,7 @@ wavParse::~wavParse(void) {
 wavWrite::wavWrite(char* fileName) {
 	this->fh = fopen(fileName, "wb");
 	if ( this->fh==NULL ) {
-		printf("Error: Wav file is invalid!");
+		printf("Error: Wav file is invalid!\n");
 		exit(0);
 	}
 }

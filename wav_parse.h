@@ -29,9 +29,7 @@ class wavParse {
 		
 		size_t loadWorkSize(int filterSize);
 		size_t loadData(int count);
-		void flush();
 		void reset();
-		long int tell();
 
 		wavData header;
 		char* fileName = NULL;

@@ -9,7 +9,8 @@ wav_parse.o: wav_parse.cpp wav_parse.h
 	g++ -Wall -c wav_parse.cpp
 
 fast-fir: fast-fir.cu filter_parse.o wav_parse.o
-	nvcc $^ -o $@ -lcufft $(INC_FLAGS)
+	nvcc $^ -o $@ -lcufft $(INC_FLAGS) -lfftw3
 
 clean:
 	rm -f fast-fir wav_parse.o filter_parse.o
+	rm -f FFT_Results*
