@@ -1,0 +1,396 @@
+Frederich Stine - EN 605.617 - JHU EP
+----------------------------------------------------------------
+Example runner to show execution of FIR FFT project
+----------------------------------------------------------------
+ This runner demonstrates a running the FIR FFT project on three different
+ audio files with two different FIR filters. This runner shows the performance
+ differences between the CPU and GPU implementations of the algorithms
+ This runner does this with two different FFT sizes.
+
+ You can pause execution at any time and listen to the resulting audio and view
+ the resulting FFT files.
+
+Press enter to continue:
+CPU FIR and FFT - 440Hz 5Sec - FFT Size 1024 - bandstop
+----- Wav Info -----
+ChunkSize: 444516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 0.862131s
+CPU FFT Runtime: 0.008896s
+CPU FFT Runtime: 0.008377s
+Press enter to continue:
+GPU FIR and FFT - 440Hz 5Sec - FFT Size 1024 - bandstop
+----- Wav Info -----
+ChunkSize: 444516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.007314s
+GPU FFT Runtime: 0.005279s
+GPU FFT Runtime: 0.005172s
+Press enter to continue:
+CPU FIR and FFT - 440Hz 5Sec - FFT Size 4096 - bandstop
+----- Wav Info -----
+ChunkSize: 444516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 0.864290s
+CPU FFT Runtime: 0.007814s
+CPU FFT Runtime: 0.007111s
+Press enter to continue:
+GPU FIR and FFT - 440Hz 5Sec - FFT Size 4096 - bandstop
+----- Wav Info -----
+ChunkSize: 444516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.007099s
+GPU FFT Runtime: 0.002057s
+GPU FFT Runtime: 0.002020s
+Press enter to continue:
+CPU FIR and FFT - 440Hz 5Sec - FFT Size 1024 - highpass
+----- Wav Info -----
+ChunkSize: 444516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 0.305695s
+CPU FFT Runtime: 0.009015s
+CPU FFT Runtime: 0.008743s
+Press enter to continue:
+GPU FIR and FFT - 440Hz 5Sec - FFT Size 1024 - highpass
+----- Wav Info -----
+ChunkSize: 444516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.004171s
+GPU FFT Runtime: 0.005349s
+GPU FFT Runtime: 0.005307s
+Press enter to continue:
+CPU FIR and FFT - 440Hz 5Sec - FFT Size 4096 - highpass
+----- Wav Info -----
+ChunkSize: 444516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 0.308254s
+CPU FFT Runtime: 0.007983s
+CPU FFT Runtime: 0.007432s
+Press enter to continue:
+GPU FIR and FFT - 440Hz 5Sec - FFT Size 4096 - highpass
+----- Wav Info -----
+ChunkSize: 444516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.004237s
+GPU FFT Runtime: 0.002095s
+GPU FFT Runtime: 0.002390s
+Press enter to continue:
+CPU FIR and FFT - 440Hz 30Sec - FFT Size 1024 - bandstop
+----- Wav Info -----
+ChunkSize: 2649516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 5.135141s
+CPU FFT Runtime: 0.050475s
+CPU FFT Runtime: 0.050132s
+Press enter to continue:
+GPU FIR and FFT - 440Hz 30Sec - FFT Size 1024 - bandstop
+----- Wav Info -----
+ChunkSize: 2649516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.040277s
+GPU FFT Runtime: 0.031076s
+GPU FFT Runtime: 0.030970s
+Press enter to continue:
+CPU FIR and FFT - 440Hz 30Sec - FFT Size 4096 - bandstop
+----- Wav Info -----
+ChunkSize: 2649516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 5.167036s
+CPU FFT Runtime: 0.043225s
+CPU FFT Runtime: 0.042753s
+Press enter to continue:
+GPU FIR and FFT - 440Hz 30Sec - FFT Size 4096 - bandstop
+----- Wav Info -----
+ChunkSize: 2649516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.040884s
+GPU FFT Runtime: 0.012180s
+GPU FFT Runtime: 0.012092s
+Press enter to continue:
+CPU FIR and FFT - 440Hz 30Sec - FFT Size 1024 - highpass
+----- Wav Info -----
+ChunkSize: 2649516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 1.819564s
+CPU FFT Runtime: 0.050608s
+CPU FFT Runtime: 0.051257s
+Press enter to continue:
+GPU FIR and FFT - 440Hz 30Sec - FFT Size 1024 - highpass
+----- Wav Info -----
+ChunkSize: 2649516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.023696s
+GPU FFT Runtime: 0.031000s
+GPU FFT Runtime: 0.031107s
+Press enter to continue:
+CPU FIR and FFT - 440Hz 30Sec - FFT Size 4096 - highpass
+----- Wav Info -----
+ChunkSize: 2649516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 1.800168s
+CPU FFT Runtime: 0.042677s
+CPU FFT Runtime: 0.043563s
+Press enter to continue:
+GPU FIR and FFT - 440Hz 30Sec - FFT Size 4096 - highpass
+----- Wav Info -----
+ChunkSize: 2649516
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 44100
+ByteRate: 88200
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.022579s
+GPU FFT Runtime: 0.011056s
+GPU FFT Runtime: 0.010861s
+Press enter to continue:
+CPU FIR and FFT - Cantina Band 60s - FFT Size 1024 - bandstop
+----- Wav Info -----
+ChunkSize: 2646036
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 22050
+ByteRate: 44100
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 5.177013s
+CPU FFT Runtime: 0.051947s
+CPU FFT Runtime: 0.051527s
+Press enter to continue:
+GPU FIR and FFT - Cantina Band 60s - FFT Size 1024 - bandstop
+----- Wav Info -----
+ChunkSize: 2646036
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 22050
+ByteRate: 44100
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.037226s
+GPU FFT Runtime: 0.028699s
+GPU FFT Runtime: 0.028704s
+Press enter to continue:
+CPU FIR and FFT - Cantina Band 60s - FFT Size 4096 - bandstop
+----- Wav Info -----
+ChunkSize: 2646036
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 22050
+ByteRate: 44100
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 5.106791s
+CPU FFT Runtime: 0.043717s
+CPU FFT Runtime: 0.043069s
+Press enter to continue:
+GPU FIR and FFT - Cantina Band 60s - FFT Size 4096 - bandstop
+----- Wav Info -----
+ChunkSize: 2646036
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 22050
+ByteRate: 44100
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.037490s
+GPU FFT Runtime: 0.011007s
+GPU FFT Runtime: 0.010923s
+Press enter to continue:
+CPU FIR and FFT - Cantina Band 60s - FFT Size 1024 - highpass
+----- Wav Info -----
+ChunkSize: 2646036
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 22050
+ByteRate: 44100
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 1.834742s
+CPU FFT Runtime: 0.052221s
+CPU FFT Runtime: 0.051642s
+Press enter to continue:
+GPU FIR and FFT - Cantina Band 60s - FFT Size 1024 - highpass
+----- Wav Info -----
+ChunkSize: 2646036
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 22050
+ByteRate: 44100
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.022710s
+GPU FFT Runtime: 0.028746s
+GPU FFT Runtime: 0.028484s
+Press enter to continue:
+CPU FIR and FFT - Cantina Band 60s - FFT Size 4096 - highpass
+----- Wav Info -----
+ChunkSize: 2646036
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 22050
+ByteRate: 44100
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+CPU FIR Runtime: 1.812365s
+CPU FFT Runtime: 0.043977s
+CPU FFT Runtime: 0.042940s
+Press enter to continue:
+GPU FIR and FFT - Cantina Band 60s - FFT Size 4096 - highpass
+----- Wav Info -----
+ChunkSize: 2646036
+SubChunkSize: 16
+AudioFormat: 1
+NumChannels: 1
+SampleRate: 22050
+ByteRate: 44100
+BlockAlign: 2
+BitsPerSample: 16
+SubChunk2Size 16
+
+GPU FIR Runtime: 0.021919s
+GPU FFT Runtime: 0.011935s
+GPU FFT Runtime: 0.010985s
