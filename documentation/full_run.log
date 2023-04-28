@@ -23,9 +23,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 0.862131s
-CPU FFT Runtime: 0.008896s
-CPU FFT Runtime: 0.008377s
+CPU FIR Runtime: 1.297875s
+CPU FFT Runtime: 0.008923s
+CPU FFT Runtime: 0.008430s
 Press enter to continue:
 GPU FIR and FFT - 440Hz 5Sec - FFT Size 1024 - bandstop
 ----- Wav Info -----
@@ -39,9 +39,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.007314s
-GPU FFT Runtime: 0.005279s
-GPU FFT Runtime: 0.005172s
+GPU FIR Runtime: 0.009123s
+GPU FFT Runtime: 0.005477s
+GPU FFT Runtime: 0.005185s
 Press enter to continue:
 CPU FIR and FFT - 440Hz 5Sec - FFT Size 4096 - bandstop
 ----- Wav Info -----
@@ -55,9 +55,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 0.864290s
-CPU FFT Runtime: 0.007814s
-CPU FFT Runtime: 0.007111s
+CPU FIR Runtime: 1.309172s
+CPU FFT Runtime: 0.007816s
+CPU FFT Runtime: 0.007144s
 Press enter to continue:
 GPU FIR and FFT - 440Hz 5Sec - FFT Size 4096 - bandstop
 ----- Wav Info -----
@@ -71,9 +71,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.007099s
-GPU FFT Runtime: 0.002057s
-GPU FFT Runtime: 0.002020s
+GPU FIR Runtime: 0.008912s
+GPU FFT Runtime: 0.002098s
+GPU FFT Runtime: 0.002023s
 Press enter to continue:
 CPU FIR and FFT - 440Hz 5Sec - FFT Size 1024 - highpass
 ----- Wav Info -----
@@ -87,9 +87,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 0.305695s
-CPU FFT Runtime: 0.009015s
-CPU FFT Runtime: 0.008743s
+CPU FIR Runtime: 0.308226s
+CPU FFT Runtime: 0.008993s
+CPU FFT Runtime: 0.008722s
 Press enter to continue:
 GPU FIR and FFT - 440Hz 5Sec - FFT Size 1024 - highpass
 ----- Wav Info -----
@@ -103,9 +103,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.004171s
-GPU FFT Runtime: 0.005349s
-GPU FFT Runtime: 0.005307s
+GPU FIR Runtime: 0.004594s
+GPU FFT Runtime: 0.005559s
+GPU FFT Runtime: 0.005216s
 Press enter to continue:
 CPU FIR and FFT - 440Hz 5Sec - FFT Size 4096 - highpass
 ----- Wav Info -----
@@ -119,9 +119,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 0.308254s
-CPU FFT Runtime: 0.007983s
-CPU FFT Runtime: 0.007432s
+CPU FIR Runtime: 0.310197s
+CPU FFT Runtime: 0.007915s
+CPU FFT Runtime: 0.007466s
 Press enter to continue:
 GPU FIR and FFT - 440Hz 5Sec - FFT Size 4096 - highpass
 ----- Wav Info -----
@@ -135,9 +135,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.004237s
-GPU FFT Runtime: 0.002095s
-GPU FFT Runtime: 0.002390s
+GPU FIR Runtime: 0.004768s
+GPU FFT Runtime: 0.002848s
+GPU FFT Runtime: 0.002089s
 Press enter to continue:
 CPU FIR and FFT - 440Hz 30Sec - FFT Size 1024 - bandstop
 ----- Wav Info -----
@@ -151,9 +151,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 5.135141s
-CPU FFT Runtime: 0.050475s
-CPU FFT Runtime: 0.050132s
+CPU FIR Runtime: 7.800830s
+CPU FFT Runtime: 0.050463s
+CPU FFT Runtime: 0.050539s
 Press enter to continue:
 GPU FIR and FFT - 440Hz 30Sec - FFT Size 1024 - bandstop
 ----- Wav Info -----
@@ -167,9 +167,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.040277s
-GPU FFT Runtime: 0.031076s
-GPU FFT Runtime: 0.030970s
+GPU FIR Runtime: 0.051506s
+GPU FFT Runtime: 0.031009s
+GPU FFT Runtime: 0.031057s
 Press enter to continue:
 CPU FIR and FFT - 440Hz 30Sec - FFT Size 4096 - bandstop
 ----- Wav Info -----
@@ -183,9 +183,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 5.167036s
-CPU FFT Runtime: 0.043225s
-CPU FFT Runtime: 0.042753s
+CPU FIR Runtime: 7.722462s
+CPU FFT Runtime: 0.042657s
+CPU FFT Runtime: 0.042317s
 Press enter to continue:
 GPU FIR and FFT - 440Hz 30Sec - FFT Size 4096 - bandstop
 ----- Wav Info -----
@@ -199,9 +199,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.040884s
-GPU FFT Runtime: 0.012180s
-GPU FFT Runtime: 0.012092s
+GPU FIR Runtime: 0.051367s
+GPU FFT Runtime: 0.011817s
+GPU FFT Runtime: 0.011776s
 Press enter to continue:
 CPU FIR and FFT - 440Hz 30Sec - FFT Size 1024 - highpass
 ----- Wav Info -----
@@ -215,9 +215,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 1.819564s
-CPU FFT Runtime: 0.050608s
-CPU FFT Runtime: 0.051257s
+CPU FIR Runtime: 1.821602s
+CPU FFT Runtime: 0.050885s
+CPU FFT Runtime: 0.051458s
 Press enter to continue:
 GPU FIR and FFT - 440Hz 30Sec - FFT Size 1024 - highpass
 ----- Wav Info -----
@@ -231,9 +231,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.023696s
-GPU FFT Runtime: 0.031000s
-GPU FFT Runtime: 0.031107s
+GPU FIR Runtime: 0.023274s
+GPU FFT Runtime: 0.028875s
+GPU FFT Runtime: 0.029013s
 Press enter to continue:
 CPU FIR and FFT - 440Hz 30Sec - FFT Size 4096 - highpass
 ----- Wav Info -----
@@ -247,9 +247,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 1.800168s
-CPU FFT Runtime: 0.042677s
-CPU FFT Runtime: 0.043563s
+CPU FIR Runtime: 1.820920s
+CPU FFT Runtime: 0.042724s
+CPU FFT Runtime: 0.043398s
 Press enter to continue:
 GPU FIR and FFT - 440Hz 30Sec - FFT Size 4096 - highpass
 ----- Wav Info -----
@@ -263,9 +263,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.022579s
-GPU FFT Runtime: 0.011056s
-GPU FFT Runtime: 0.010861s
+GPU FIR Runtime: 0.022180s
+GPU FFT Runtime: 0.010793s
+GPU FFT Runtime: 0.010577s
 Press enter to continue:
 CPU FIR and FFT - Cantina Band 60s - FFT Size 1024 - bandstop
 ----- Wav Info -----
@@ -279,9 +279,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 5.177013s
-CPU FFT Runtime: 0.051947s
-CPU FFT Runtime: 0.051527s
+CPU FIR Runtime: 7.712869s
+CPU FFT Runtime: 0.051311s
+CPU FFT Runtime: 0.050963s
 Press enter to continue:
 GPU FIR and FFT - Cantina Band 60s - FFT Size 1024 - bandstop
 ----- Wav Info -----
@@ -295,9 +295,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.037226s
-GPU FFT Runtime: 0.028699s
-GPU FFT Runtime: 0.028704s
+GPU FIR Runtime: 0.048160s
+GPU FFT Runtime: 0.027981s
+GPU FFT Runtime: 0.028111s
 Press enter to continue:
 CPU FIR and FFT - Cantina Band 60s - FFT Size 4096 - bandstop
 ----- Wav Info -----
@@ -311,9 +311,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 5.106791s
-CPU FFT Runtime: 0.043717s
-CPU FFT Runtime: 0.043069s
+CPU FIR Runtime: 7.749481s
+CPU FFT Runtime: 0.043708s
+CPU FFT Runtime: 0.042841s
 Press enter to continue:
 GPU FIR and FFT - Cantina Band 60s - FFT Size 4096 - bandstop
 ----- Wav Info -----
@@ -327,9 +327,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.037490s
-GPU FFT Runtime: 0.011007s
-GPU FFT Runtime: 0.010923s
+GPU FIR Runtime: 0.046336s
+GPU FFT Runtime: 0.010619s
+GPU FFT Runtime: 0.010711s
 Press enter to continue:
 CPU FIR and FFT - Cantina Band 60s - FFT Size 1024 - highpass
 ----- Wav Info -----
@@ -343,9 +343,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 1.834742s
-CPU FFT Runtime: 0.052221s
-CPU FFT Runtime: 0.051642s
+CPU FIR Runtime: 1.820880s
+CPU FFT Runtime: 0.051774s
+CPU FFT Runtime: 0.051296s
 Press enter to continue:
 GPU FIR and FFT - Cantina Band 60s - FFT Size 1024 - highpass
 ----- Wav Info -----
@@ -359,9 +359,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.022710s
-GPU FFT Runtime: 0.028746s
-GPU FFT Runtime: 0.028484s
+GPU FIR Runtime: 0.024531s
+GPU FFT Runtime: 0.030770s
+GPU FFT Runtime: 0.030762s
 Press enter to continue:
 CPU FIR and FFT - Cantina Band 60s - FFT Size 4096 - highpass
 ----- Wav Info -----
@@ -375,9 +375,9 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-CPU FIR Runtime: 1.812365s
-CPU FFT Runtime: 0.043977s
-CPU FFT Runtime: 0.042940s
+CPU FIR Runtime: 1.817679s
+CPU FFT Runtime: 0.043454s
+CPU FFT Runtime: 0.042938s
 Press enter to continue:
 GPU FIR and FFT - Cantina Band 60s - FFT Size 4096 - highpass
 ----- Wav Info -----
@@ -391,6 +391,6 @@ BlockAlign: 2
 BitsPerSample: 16
 SubChunk2Size 16
 
-GPU FIR Runtime: 0.021919s
-GPU FFT Runtime: 0.011935s
-GPU FFT Runtime: 0.010985s
+GPU FIR Runtime: 0.022737s
+GPU FFT Runtime: 0.010996s
+GPU FFT Runtime: 0.010766s
