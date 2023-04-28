@@ -1,3 +1,13 @@
+/** Frederich Stine - EN605.617 FIR Project
+ *  wav_parse.h
+ *  
+ *  This is the header file for the wavParse and wavWrite classes
+ * 
+ *  These classes handle reading in wav files for FIR filtering and 
+ *  FFT calculations.
+ *  These classes also handle writing the filtered data to a new file.
+ */ 
+
 #ifndef __WAV_PARSE_C__
 #define __WAV_PARSE_C__
 
@@ -22,35 +32,57 @@ typedef struct {
 	uint32_t SubChunk2Size;
 } wavData;
 
+/** Wav Parse class definitions
+*/
 class wavParse {
 	public:
+		// Wav parse constructor takes a file name
 		wavParse(char* fileName); 
+		// Wav parse deconstructor
 		~wavParse();
 		
+		// Function for loading data for FIR filtering
 		size_t loadWorkSize(int filterSize);
+		// Function for loading dat for FFT calculation
 		size_t loadData(int count);
+		// Function to reset the file pointer
 		void reset();
+		// Function to print data about the file
 		void printInfo();
 
+		// Header of wav file
 		wavData header;
+		// Filename of wav file
 		char* fileName = NULL;
+		// Buffer for loading of audio data
 		double* audioBuf = NULL;
+		// Work size of FIR filter
 		int workSize = 10000;
-		FILE* fh;
 	private:
+		// File handle
+		FILE* fh;
+		// Bool to pad data for FFT
 		bool firstLoad = true;
 };
 
+/** Wav Writer class definitions
+*/
 class wavWrite {
 	public:
+		// Wav write constructor takes a file name
 		wavWrite(char* fileName); 
+		// Wav write deconstructor
 		~wavWrite();
 		
+		// Funtcion to write the file header
 		void writeHeader(wavData* header);
+		// Funtion to write a single sample
 		void writeSample(double sample);
+		// Function to write many samples
 		void writeBulk(double* sample, int sampleCount);
+	private:
+		// File handle
 		FILE* fh;
-
 };
 
 
